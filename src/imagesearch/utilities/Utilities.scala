@@ -10,3 +10,7 @@ package imagesearch.utilities
 class Utilities {
 
 }
+
+abstract class Ingestor[From, To] {
+  abstract def ingest(from: From): To
+}
