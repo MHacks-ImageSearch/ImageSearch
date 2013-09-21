@@ -25,6 +25,7 @@
         <SOURCES />
       </library>
     </orderEntry>
+    <orderEntry type="library" name="org.mongodb:casbah-commons_2.10:2.6.3" level="project" />
   </component>
 </module>
 
