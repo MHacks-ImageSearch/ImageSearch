@@ -9,4 +9,4 @@ import imagesearch.utilities.Token
  * Time: 1:11 AM
  * To change this template use File | Settings | File Templates.
  */
-class ImageToken extends Token
+case class ImageToken(val dim: (Int, Int), val totalHistogram: (Array[Int], Array[Int], Array[Int])) extends Token

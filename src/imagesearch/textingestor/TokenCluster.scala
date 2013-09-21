@@ -1,6 +1,7 @@
 package imagesearch.textingestor
 
 import imagesearch.imageingestor.ImageToken
+import java.awt.Image
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,4 +10,4 @@ import imagesearch.imageingestor.ImageToken
  * Time: 2:53 AM
  * To change this template use File | Settings | File Templates.
  */
-case class TokenCluster(val textTokens: List[TextToken], val imageToken: List[ImageToken])
+case class TokenCluster(val textTokens: Map[String, Int], val imageToken: Map[Image, List[ImageToken]])

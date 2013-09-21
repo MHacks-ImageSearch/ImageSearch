@@ -1,9 +1,13 @@
 package imagesearch.textingestor
 
-import org.jsoup.nodes.Document
+import org.jsoup.nodes.{Element, Document}
 import imagesearch.utilities.Ingestor
 import com.mongodb.DBCollection
 import com.mongodb.casbah.commons.MongoDBObject
+import java.io.{InputStream, OutputStream, FileOutputStream, BufferedOutputStream}
+import java.net.HttpURLConnection
+import java.awt.image.BufferedImage
+import javax.imageio.ImageIO
 
 /**
  * Created with IntelliJ IDEA.
@@ -14,40 +18,23 @@ import com.mongodb.casbah.commons.MongoDBObject
  */
 class HeadIngestor(private val unvisitedCol: DBCollection) extends Ingestor[Document, DocumentBundle] {
   override def ingest(doc: Document): DocumentBundle = {
-  	var out: OutputStream = null;
-  	var in: InputStream = null;
-  	for each doc.getElementsMatchingText("<img "){ //maybe src='instead
-  		try{
-  			val url = URL(doc.getgetElementsMatchingText("<img").after)
-  			val connection = url.openConnection().asInstanceOf[HttpURLConnection]
-     		connection.setRequestMethod("GET")
-      		in = connection.getInputStream
-      		//need to save image in data structure
-     		out = new BufferedOutputStream(new FileOutputStream(localfile))
-      		val byteArray = Stream.continually(in.read).takeWhile(-1 !=).map(_.toByte).toArray
 
-      		out.write(byteArray)
-    		} catch {
-      			case e: Exception => println(e.printStackTrace()) 
-    		} finally {
-      			out.close
-      			in.close
-      		}
-      	}
+    for(element: Element <- doc.select("img")) {
+      try {
+        val url = URL(element.absUrl("src"))
+        val connection = url.openConnection().asInstanceOf[HttpURLConnection]
+        connection.setRequestMethod("GET")
+        val image = ImageIO.read(connection.getInputStream)
+      } catch {
+        case _: Throwable => println(_.printStackTrace())
+      } finally {
+        out.close
+        in.close
+      }
+    }
 
-  	for each doc.getElementsMatchingText("<link"){
-  		/*add the link to the databasE
-
-  		*/
-
-  	}
-
-  	doc.getElementsMatchingText("<nav"){
-  		/*add the link to the database
-
-  		*/
-  	}
-
+    addUnvisitedURLs(doc.select("link"))
+    addUnvisitedURLs(doc.select("nav"))
   }
 
   def addUnvisitedURLs(urls: List[String]) {
