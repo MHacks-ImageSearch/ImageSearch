@@ -1,5 +1,7 @@
 package imagesearch.utilities
 
+import com.mongodb.MongoClient
+
 /**
  * Created with IntelliJ IDEA.
  * User: brendan
@@ -7,10 +9,11 @@ package imagesearch.utilities
  * Time: 1:02 AM
  * To change this template use File | Settings | File Templates.
  */
-class Utilities {
+object Utilities {
+  def getClient = MongoClient("localhost", 27017)
 
 }
 
 abstract class Ingestor[From, To] {
-  abstract def ingest(from: From): To
+  def ingest(from: From): To
 }
