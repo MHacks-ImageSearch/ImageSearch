@@ -30,21 +30,16 @@ class FinalIngestor extends Ingestor[DocumentBundle, TokenCluster] {
     histogram(elementVisitor.textList)
   }
 
-  def histogram(words: List[String]): mutable.Map[String, Int] = {
+  def histogram(words: Seq[String]): Map[String, Int] = {
     val map = mutable.Map[String, Int]()
-    words.foreach {
-      if(map.contains(_)) {
-        map(_) += 1
-      } else {
-        map(_) = 1
-      }
-    }
+    words.foreach { word => if(map.contains(word)) { map(word) += 1 } else { map(word) = 1 } }
+    map.toMap[String, Int]
   }
 
   private class ElementVisitor extends NodeVisitor {
     // TODO: There is probably a official set of whitespace or something.
     private val whiteSpaceChars = Array(' ', '\t', '\n', '\v', '\r')
-    val textList = mutable.List[String]()
+    val textList = mutable.MutableList[String]()
 
     override def head(node: Node, depth: Int) {
       node match {
@@ -55,6 +50,6 @@ class FinalIngestor extends Ingestor[DocumentBundle, TokenCluster] {
       }
     }
 
-    override def tail(node: Node, depth: Int)
+    override def tail(node: Node, depth: Int) {}
   }
 }

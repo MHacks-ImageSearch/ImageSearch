@@ -1,9 +1,14 @@
 package imagesearch.imageingestor.index
 
-import imagesearch.imageingestor.ImageToken
+import imagesearch.imageingestor._
 import java.awt.Image
 import imagesearch.utilities.Ingestor
 import java.awt.image.BufferedImage
+import imagesearch.imageingestor.imageutils._
+import scala.collection.mutable
+import imagesearch.imageingestor.RGBHistogram
+import imagesearch.imageingestor.Range
+import imagesearch.imageingestor.ImageToken
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,21 +17,13 @@ import java.awt.image.BufferedImage
  * Time: 12:45 AM
  * To change this template use File | Settings | File Templates.
  */
-class ImageIngestor extends Ingestor[Image, ImageToken] {
+class ImageIngestor extends Ingestor[BufferedImage, ImageToken] {
 
-  override def ingest(image: BufferedImage) = ImageToken((image.getWidth, image.getHeight), histogram(image))
+  override def ingest(image: BufferedImage) = {
+    val fullHistogram = imageutils.histogram(image)
+    val segmentationMasks = separateMaskByRegion(segmentionMask(image, fullHistogram))
 
-  def histogram(image: BufferedImage): (Array[Int], Array[Int], Array[Int]) = {
-    val red = new Array[Int](256)
-    val green = new Array[Int](256)
-    val blue = new Array[Int](256)
-    for(y <- 0 until image.getHeight) {
-      for(x <- 0 until image.getWidth) {
-        val pixel = image.getRGB(x, y)
-        red(pixel.toByte) += 1
-        green((pixel >> 8).toByte)
-        blue((pixel >> 16).toByte)
-      }
-    }
+    def histogram(mask: ImageMask) = imageutils.histogram(image, mask)
+    ImageToken((image.getWidth, image.getHeight), fullHistogram, segmentationMasks.map(histogram))
   }
 }

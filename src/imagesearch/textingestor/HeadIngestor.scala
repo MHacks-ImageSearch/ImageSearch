@@ -8,6 +8,7 @@ import java.io.{InputStream, OutputStream, FileOutputStream, BufferedOutputStrea
 import java.net.HttpURLConnection
 import java.awt.image.BufferedImage
 import javax.imageio.ImageIO
+import scala.collection.mutable
 
 /**
  * Created with IntelliJ IDEA.
@@ -17,14 +18,15 @@ import javax.imageio.ImageIO
  * To change this template use File | Settings | File Templates.
  */
 class HeadIngestor(private val unvisitedCol: DBCollection) extends Ingestor[Document, DocumentBundle] {
-  override def ingest(doc: Document): DocumentBundle = {
 
+  override def ingest(doc: Document): DocumentBundle = {
+    val imageList = mutable.List[BufferedImage]()
     for(element: Element <- doc.select("img")) {
       try {
         val url = URL(element.absUrl("src"))
         val connection = url.openConnection().asInstanceOf[HttpURLConnection]
         connection.setRequestMethod("GET")
-        val image = ImageIO.read(connection.getInputStream)
+        imageList.add(ImageIO.read(connection.getInputStream))
       } catch {
         case _: Throwable => println(_.printStackTrace())
       } finally {
@@ -35,6 +37,7 @@ class HeadIngestor(private val unvisitedCol: DBCollection) extends Ingestor[Docu
 
     addUnvisitedURLs(doc.select("link"))
     addUnvisitedURLs(doc.select("nav"))
+    DocumentBundle(doc, imageList)
   }
 
   def addUnvisitedURLs(urls: List[String]) {
