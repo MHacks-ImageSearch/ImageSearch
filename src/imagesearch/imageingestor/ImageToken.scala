@@ -4,6 +4,8 @@ import imagesearch.utilities.Token
 import java.awt.image.BufferedImage
 import scala.collection.mutable
 import imagesearch.imageingestor.ImageMask.Kernel
+import java.lang.Math._
+import imagesearch.imageingestor.imageutils.{Histogram, NormalizedHistogram}
 
 /**
  * Created with IntelliJ IDEA.
@@ -12,15 +14,22 @@ import imagesearch.imageingestor.ImageMask.Kernel
  * Time: 1:11 AM
  * To change this template use File | Settings | File Templates.
  */
-case class ImageToken(val dim: (Int, Int), val fullHistogram: RGBHistogram, val segmentedHistograms: List[RGBHistogram]) extends Token
+case class ImageToken(val fullHistogram: NormalizedRGBHistogram, val smoothnessValue: Float, val segmentedHistograms: List[NormalizedRGBHistogram]) extends Token
 
-case class RGBHistogram(val red: Array[Int], val green: Array[Int], val blue: Array[Int])
+case class RGBHistogram(val red: Histogram, val green: Histogram, val blue: Histogram) {
+  def normalize(size: Int): NormalizedRGBHistogram = {
+    def normalize(hist: Histogram) = hist.map(_.toFloat / size)
+    return NormalizedRGBHistogram(normalize(red), normalize(green), normalize(blue))
+  }
+}
+
+case class NormalizedRGBHistogram(val red: NormalizedHistogram, val green: NormalizedHistogram, val blue: NormalizedHistogram)
 
 case class Range(val left: Int, val peak: Int, val right: Int)
 
 package object imageutils {
   type Histogram = Array[Int]
-  type NormalizeHistogram = Array[Float]
+  type NormalizedHistogram = Array[Float]
 
   class Pixel(val value: Int) {
     def in(range: Range): Boolean = value >= range.left && value <= range.right
@@ -60,6 +69,42 @@ package object imageutils {
     RGBHistogram(red, green, blue)
   }
 
+  def computeSmoothnessValue(image: BufferedImage): Float = (dxSmoothnessValue(image) + dySmoothnessValue(image)) / 2
+
+  def dxSmoothnessValue(image: BufferedImage): Float = {
+    val (red, green, blue) = SingleChannelImage(image)
+    return (dxSmoothnessValue(red) + dxSmoothnessValue(green) + dxSmoothnessValue(blue)) / 3
+  }
+
+  def dxSmoothnessValue(image: SingleChannelImage): Float = {
+    val width = image.width
+    val height = image.height
+    var sum = 0
+    for(y <- 0 until height) {
+      for(x <- 0 until (width - 1)) {
+        sum += abs(image(x, y) - image(x + 1, y))
+      }
+    }
+    return sum.toFloat / (width * height)
+  }
+
+  def dySmoothnessValue(image: BufferedImage): Float = {
+    val (red, green, blue) = SingleChannelImage(image)
+    return (dySmoothnessValue(red) + dySmoothnessValue(green) + dySmoothnessValue(blue)) / 3
+  }
+
+  def dySmoothnessValue(image: SingleChannelImage): Float = {
+    val width = image.width
+    val height = image.height
+    var sum = 0
+    for(y <- 0 until (height - 1)) {
+      for(x <- 0 until width) {
+        sum += abs(image(x, y) - image(x, y + 1))
+      }
+    }
+    return sum.toFloat / (width * height)
+  }
+
   def segmentionMask(image: BufferedImage, fullHistogram: RGBHistogram): ImageMask = {
     val (redChannel, greenChannel, blueChannel) = SingleChannelImage(image)
     val (redHistogram, greenHistogram, blueHistogram) = fullHistogram
@@ -87,19 +132,19 @@ package object imageutils {
         val (x, y) = toVisit.dequeue
         newMask(x, y) = true
         if(x - 1 >= 0 && image(x - 1, y)) {
-          toVisit += (x - 1, y)
+          toVisit += ((x - 1, y))
           image(x - 1, y) = false
         }
         if(y - 1 >= 0 && image(x, y - 1)) {
-          toVisit += (x, y - 1)
+          toVisit += ((x, y - 1))
           image(x, y - 1) = false
         }
         if(x + 1 < width && image(x + 1, y)) {
-          toVisit += (x + 1, y)
+          toVisit += ((x + 1, y))
           image(x + 1, y) = false
         }
         if(y + 1 < height && image(x, y + 1)) {
-          toVisit += (x, y + 1)
+          toVisit += ((x, y + 1))
           image(x, y + 1) = false
         }
         count += 1

@@ -1,13 +1,9 @@
 package imagesearch.imageingestor.index
 
 import imagesearch.imageingestor._
-import java.awt.Image
 import imagesearch.utilities.Ingestor
 import java.awt.image.BufferedImage
 import imagesearch.imageingestor.imageutils._
-import scala.collection.mutable
-import imagesearch.imageingestor.RGBHistogram
-import imagesearch.imageingestor.Range
 import imagesearch.imageingestor.ImageToken
 
 /**
@@ -19,11 +15,13 @@ import imagesearch.imageingestor.ImageToken
  */
 class ImageIngestor extends Ingestor[BufferedImage, ImageToken] {
 
-  override def ingest(image: BufferedImage) = {
+  override def ingest(image: BufferedImage): ImageToken = {
     val fullHistogram = imageutils.histogram(image)
+    val smoothnessValue = computeSmoothnessValue(image)
     val segmentationMasks = separateMaskByRegion(segmentionMask(image, fullHistogram))
 
     def histogram(mask: ImageMask) = imageutils.histogram(image, mask)
-    ImageToken((image.getWidth, image.getHeight), fullHistogram, segmentationMasks.map(histogram))
+    val size = image.getWidth * image.getHeight
+    return ImageToken(fullHistogram.normalize(size), smoothnessValue, segmentationMasks.map(histogram).map(_.normalize(size)))
   }
 }

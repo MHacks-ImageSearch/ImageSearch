@@ -29,8 +29,9 @@ class ImageMask(val width: Int, val height: Int) {
 
   def convolve(kernel: Kernel, operation: ConvolutionOperation): ImageMask = {
     val newMask = new ImageMask(width, height)
-    for(y <- 0 until height) {
-      for(x <- 0 until width) {
+    val (xBoarder, yBoarder) = kernel.center
+    for(y <- yBoarder until (height - yBoarder)) { // So that the kernel is in the image.
+      for(x <- xBoarder until (width - xBoarder)) {
         newMask(x, y) = operation(kernel, x, y)
       }
     }
