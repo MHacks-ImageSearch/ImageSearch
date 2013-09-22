@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="ivy-report.xsl"?>
+<ivy-report version="1.0">
+	<info
+		organisation="image-search"
+		module="image-search_2.10"
+		revision="0.1"
+		conf="test-internal"
+		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+		date="20130922070430"/>
+	<dependencies>
+		<module organisation="com.novus" name="salat_2.10">
+			<revision name="1.9.2" status="release" pubdate="20130820025649" resolver="public" artresolver="public" homepage="https://github.com/novus/salat" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="14">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="1769" time="286" location="/home/ubuntu/.ivy2/cache/com.novus/salat_2.10/ivy-1.9.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.novus/salat_2.10/ivy-1.9.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/novus/salat_2.10/1.9.2/salat_2.10-1.9.2.pom"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.novus" name="salat-core_2.10">
+			<revision name="1.9.2" status="release" pubdate="20130820025705" resolver="public" artresolver="public" homepage="https://github.com/novus/salat" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="20">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="3256" time="66" location="/home/ubuntu/.ivy2/cache/com.novus/salat-core_2.10/ivy-1.9.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.novus/salat-core_2.10/ivy-1.9.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/novus/salat-core_2.10/1.9.2/salat-core_2.10-1.9.2.pom"/>
+				<caller organisation="com.novus" name="salat_2.10" conf="default, compile, runtime, master" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="1.9.2"/>
+				<artifacts>
+					<artifact name="salat-core_2.10" type="jar" ext="jar" status="successful" details="" size="675930" time="348" location="/home/ubuntu/.ivy2/cache/com.novus/salat-core_2.10/jars/salat-core_2.10-1.9.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/novus/salat-core_2.10/1.9.2/salat-core_2.10-1.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-native_2.10">
+			<revision name="3.1.0" status="release" pubdate="20121229233402" resolver="public" artresolver="public" homepage="https://github.com/json4s/json4s" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="21">
+				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="2219" time="170" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-native_2.10/ivy-3.1.0.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-native_2.10/ivy-3.1.0.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json4s/json4s-native_2.10/3.1.0/json4s-native_2.10-3.1.0.pom"/>
+				<caller organisation="com.novus" name="salat-core_2.10" conf="compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="1.9.2"/>
+				<artifacts>
+					<artifact name="json4s-native_2.10" type="jar" ext="jar" status="successful" details="" size="63432" time="70" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-native_2.10/jars/json4s-native_2.10-3.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/json4s/json4s-native_2.10/3.1.0/json4s-native_2.10-3.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-core_2.10">
+			<revision name="3.1.0" status="release" pubdate="20121229233430" resolver="public" artresolver="public" homepage="https://github.com/json4s/json4s" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="22">
+				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="2568" time="137" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-core_2.10/ivy-3.1.0.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-core_2.10/ivy-3.1.0.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.1.0/json4s-core_2.10-3.1.0.pom"/>
+				<caller organisation="org.json4s" name="json4s-native_2.10" conf="compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="3.1.0"/>
+				<artifacts>
+					<artifact name="json4s-core_2.10" type="jar" ext="jar" status="successful" details="" size="462450" time="113" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-core_2.10/jars/json4s-core_2.10-3.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/json4s/json4s-core_2.10/3.1.0/json4s-core_2.10-3.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.thoughtworks.paranamer" name="paranamer">
+			<revision name="2.5.2" status="release" pubdate="20121130150456" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="24">
+				<metadata-artifact status="successful" details="" size="3235" time="64" location="/home/ubuntu/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.5.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.thoughtworks.paranamer/paranamer/ivy-2.5.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.pom"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.5.2" rev-constraint-default="2.5.2" rev-constraint-dynamic="2.5.2" callerrev="3.1.0"/>
+				<artifacts>
+					<artifact name="paranamer" type="jar" ext="jar" status="successful" details="" size="30190" time="127" location="/home/ubuntu/.ivy2/cache/com.thoughtworks.paranamer/paranamer/jars/paranamer-2.5.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/thoughtworks/paranamer/paranamer/2.5.2/paranamer-2.5.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.json4s" name="json4s-ast_2.10">
+			<revision name="3.1.0" status="release" pubdate="20121229233408" resolver="public" artresolver="public" homepage="https://github.com/json4s/json4s" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="23">
+				<license name="ASL" url="http://github.com/json4s/json4s/raw/HEAD/LICENSE"/>
+				<metadata-artifact status="successful" details="" size="2034" time="63" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-ast_2.10/ivy-3.1.0.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-ast_2.10/ivy-3.1.0.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.1.0/json4s-ast_2.10-3.1.0.pom"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="3.1.0" rev-constraint-default="3.1.0" rev-constraint-dynamic="3.1.0" callerrev="3.1.0"/>
+				<artifacts>
+					<artifact name="json4s-ast_2.10" type="jar" ext="jar" status="successful" details="" size="86503" time="74" location="/home/ubuntu/.ivy2/cache/org.json4s/json4s-ast_2.10/jars/json4s-ast_2.10-3.1.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/json4s/json4s-ast_2.10/3.1.0/json4s-ast_2.10-3.1.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.novus" name="salat-util_2.10">
+			<revision name="1.9.2" status="release" pubdate="20130820025705" resolver="public" artresolver="public" homepage="https://github.com/novus/salat" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="15">
+				<license name="Apache 2.0" url="http://www.apache.org/licenses/LICENSE-2.0"/>
+				<metadata-artifact status="successful" details="" size="2862" time="277" location="/home/ubuntu/.ivy2/cache/com.novus/salat-util_2.10/ivy-1.9.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.novus/salat-util_2.10/ivy-1.9.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/novus/salat-util_2.10/1.9.2/salat-util_2.10-1.9.2.pom"/>
+				<caller organisation="com.novus" name="salat_2.10" conf="default, compile, runtime, master" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="1.9.2"/>
+				<caller organisation="com.novus" name="salat-core_2.10" conf="compile, runtime" rev="1.9.2" rev-constraint-default="1.9.2" rev-constraint-dynamic="1.9.2" callerrev="1.9.2"/>
+				<artifacts>
+					<artifact name="salat-util_2.10" type="jar" ext="jar" status="successful" details="" size="144311" time="216" location="/home/ubuntu/.ivy2/cache/com.novus/salat-util_2.10/jars/salat-util_2.10-1.9.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/novus/salat-util_2.10/1.9.2/salat-util_2.10-1.9.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scalap">
+			<revision name="2.10.2" status="release" pubdate="20130606180705" resolver="public" artresolver="public" homepage="http://www.scala-lang.org/" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="17">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+			"/>
+				<metadata-artifact status="successful" details="" size="1805" time="117" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scalap/ivy-2.10.2.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.scala-lang/scalap/ivy-2.10.2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scalap/2.10.2/scalap-2.10.2.pom"/>
+				<caller organisation="com.novus" name="salat-util_2.10" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.9.2"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<artifacts>
+					<artifact name="scalap" type="jar" ext="jar" status="successful" details="" size="854338" time="152" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scalap/jars/scalap-2.10.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scalap/2.10.2/scalap-2.10.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="2.10.2"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-compiler">
+			<revision name="2.10.2" status="release" pubdate="20130606180625" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="18">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2809" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-compiler/ivy-2.10.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.2/scala-compiler-2.10.2.pom"/>
+				<caller organisation="org.scala-lang" name="scalap" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.10.2"/>
+				<artifacts>
+					<artifact name="scala-compiler" type="jar" ext="jar" status="no" details="" size="14411577" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-compiler/jars/scala-compiler-2.10.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-compiler/2.10.2/scala-compiler-2.10.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-reflect">
+			<revision name="2.10.2" status="release" pubdate="20130606180608" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="19">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2647" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.pom"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.10.2"/>
+				<caller organisation="com.typesafe" name="scalalogging-slf4j_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.0.1"/>
+				<artifacts>
+					<artifact name="scala-reflect" type="jar" ext="jar" status="no" details="" size="3171168" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/jars/scala-reflect-2.10.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.2/scala-reflect-2.10.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.0" status="release" pubdate="20121220072932" resolver="sbt-chain" artresolver="sbt-chain" evicted="latest-revision" evicted-reason="" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html    "/>
+				<metadata-artifact status="no" details="" size="2552" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-reflect/ivy-2.10.0.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-reflect/2.10.0/scala-reflect-2.10.0.pom"/>
+				<evicted-by rev="2.10.2"/>
+				<caller organisation="com.typesafe" name="scalalogging-slf4j_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="1.0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.scala-lang" name="scala-library">
+			<revision name="2.10.2" status="release" pubdate="20130606180543" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.scala-lang.org/" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master, default(compile), default" position="16">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html          "/>
+				<metadata-artifact status="no" details="" size="2487" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.pom"/>
+				<caller organisation="com.novus" name="salat_2.10" conf="default, compile, runtime, master" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.9.2"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.json4s" name="json4s-ast_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<caller organisation="org.json4s" name="json4s-native_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<caller organisation="com.novus" name="salat-util_2.10" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.9.2"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.10.2"/>
+				<caller organisation="com.github.nscala-time" name="nscala-time_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.2.0"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.scala-lang" name="scala-compiler" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="2.10.2"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.10.0"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.10.1" rev-constraint-default="2.10.1" rev-constraint-dynamic="2.10.1" callerrev="0.1"/>
+				<caller organisation="com.novus" name="salat-core_2.10" conf="compile, runtime" rev="2.10.2" rev-constraint-default="2.10.2" rev-constraint-dynamic="2.10.2" callerrev="1.9.2"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<artifacts>
+					<artifact name="scala-library" type="jar" ext="jar" status="no" details="" size="7121818" time="0" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.10.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.2/scala-library-2.10.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.10.1" status="release" pubdate="20130312230420" resolver="public" artresolver="public" evicted="latest-revision" evicted-reason="" homepage="http://www.scala-lang.org/" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master, master(*), compile(*), runtime(*)" position="-1">
+				<license name="BSD-like" url="http://www.scala-lang.org/downloads/license.html
+         "/>
+				<metadata-artifact status="successful" details="" size="1939" time="215" location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.1.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.scala-lang/scala-library/ivy-2.10.1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/scala-lang/scala-library/2.10.1/scala-library-2.10.1.pom"/>
+				<evicted-by rev="2.10.2"/>
+				<caller organisation="com.github.nscala-time" name="nscala-time_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.2.0"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.10.0"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.10.1" rev-constraint-default="2.10.1" rev-constraint-dynamic="2.10.1" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="2.10.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="2.10.2"/>
+				<caller organisation="com.github.nscala-time" name="nscala-time_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="0.2.0"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.scala-lang" name="scala-reflect" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.10.0"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="2.6.3"/>
+				<caller organisation="org.json4s" name="json4s-ast_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<caller organisation="org.json4s" name="json4s-native_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<caller organisation="org.json4s" name="json4s-core_2.10" conf="compile, runtime" rev="2.10.0" rev-constraint-default="2.10.0" rev-constraint-dynamic="2.10.0" callerrev="3.1.0"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-classic">
+			<revision name="1.0.3" status="release" pubdate="20120503223810" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logback.qos.ch" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="12">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="9939" time="0" location="/home/ubuntu/.ivy2/cache/ch.qos.logback/logback-classic/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.3/logback-classic-1.0.3.pom"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="logback-classic" type="jar" ext="jar" status="no" details="" size="248737" time="0" location="/home/ubuntu/.ivy2/cache/ch.qos.logback/logback-classic/jars/logback-classic-1.0.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/ch/qos/logback/logback-classic/1.0.3/logback-classic-1.0.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="ch.qos.logback" name="logback-core">
+			<revision name="1.0.3" status="release" pubdate="20120503223655" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://logback.qos.ch" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="13">
+				<license name="Eclipse Public License - v 1.0" url="http://www.eclipse.org/legal/epl-v10.html"/>
+				<license name="GNU Lesser General Public License" url="http://www.gnu.org/licenses/old-licenses/lgpl-2.1.html"/>
+				<metadata-artifact status="no" details="" size="9309" time="0" location="/home/ubuntu/.ivy2/cache/ch.qos.logback/logback-core/ivy-1.0.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.3/logback-core-1.0.3.pom"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.0.3" rev-constraint-default="1.0.3" rev-constraint-dynamic="1.0.3" callerrev="1.0.3"/>
+				<artifacts>
+					<artifact name="logback-core" type="jar" ext="jar" status="no" details="" size="332478" time="0" location="/home/ubuntu/.ivy2/cache/ch.qos.logback/logback-core/jars/logback-core-1.0.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/ch/qos/logback/logback-core/1.0.3/logback-core-1.0.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="log4j-over-slf4j">
+			<revision name="1.7.1" status="release" pubdate="20120914211252" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="11">
+				<license name="Apache Software Licenses" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="4732" time="0" location="/home/ubuntu/.ivy2/cache/org.slf4j/log4j-over-slf4j/ivy-1.7.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.1/log4j-over-slf4j-1.7.1.pom"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="log4j-over-slf4j" type="jar" ext="jar" status="no" details="" size="19975" time="0" location="/home/ubuntu/.ivy2/cache/org.slf4j/log4j-over-slf4j/jars/log4j-over-slf4j-1.7.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/log4j-over-slf4j/1.7.1/log4j-over-slf4j-1.7.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.typesafe" name="scalalogging-slf4j_2.10">
+			<revision name="1.0.1" status="release" pubdate="20121223224332" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://github.com/typesafehub/scalalogging" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="9">
+				<license name="Apache 2.0 License" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="no" details="" size="2697" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe/scalalogging-slf4j_2.10/ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/typesafe/scalalogging-slf4j_2.10/1.0.1/scalalogging-slf4j_2.10-1.0.1.pom"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="scalalogging-slf4j_2.10" type="jar" ext="jar" status="no" details="" size="78152" time="0" location="/home/ubuntu/.ivy2/cache/com.typesafe/scalalogging-slf4j_2.10/jars/scalalogging-slf4j_2.10-1.0.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/typesafe/scalalogging-slf4j_2.10/1.0.1/scalalogging-slf4j_2.10-1.0.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.slf4j" name="slf4j-api">
+			<revision name="1.7.2" status="release" pubdate="20121011185524" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.slf4j.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master, default(compile), default" position="10">
+				<metadata-artifact status="no" details="" size="4469" time="0" location="/home/ubuntu/.ivy2/cache/org.slf4j/slf4j-api/ivy-1.7.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.pom"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.slf4j" name="log4j-over-slf4j" conf="default, compile, runtime, master" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="1.7.1"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="com.typesafe" name="scalalogging-slf4j_2.10" conf="default, compile, runtime, master" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="1.0.1"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="1.0.3"/>
+				<caller organisation="com.novus" name="salat-util_2.10" conf="compile, runtime" rev="1.7.2" rev-constraint-default="1.7.2" rev-constraint-dynamic="1.7.2" callerrev="1.9.2"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="0.1"/>
+				<artifacts>
+					<artifact name="slf4j-api" type="jar" ext="jar" status="no" details="" size="26083" time="0" location="/home/ubuntu/.ivy2/cache/org.slf4j/slf4j-api/jars/slf4j-api-1.7.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/slf4j/slf4j-api/1.7.2/slf4j-api-1.7.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="1.6.4" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="1.7.2"/>
+				<caller organisation="ch.qos.logback" name="logback-classic" conf="default, compile, runtime, master" rev="1.6.4" rev-constraint-default="1.6.4" rev-constraint-dynamic="1.6.4" callerrev="1.0.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.7.1" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="default(compile), default, compile, master(*), compile(*), runtime, runtime(*), master" position="-1">
+				<evicted-by rev="1.7.2"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.slf4j" name="log4j-over-slf4j" conf="default, compile, runtime, master" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="1.7.1"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+			<revision name="1.6.0" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="master(*), compile(*), runtime(*)" position="-1">
+				<evicted-by rev="1.7.1"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="1.6.0" rev-constraint-default="1.6.0" rev-constraint-dynamic="1.6.0" callerrev="2.6.3"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah_2.10">
+			<revision name="2.6.3" status="release" pubdate="20130916153253" resolver="public" artresolver="public" homepage="http://github.com/mongodb/casbah" downloaded="true" searched="true" default="false" conf="default(compile), default, compile, runtime, master" position="0">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="2306" time="92" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah_2.10/ivy-2.6.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah_2.10/ivy-2.6.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/casbah_2.10/2.6.3/casbah_2.10-2.6.3.pom"/>
+				<caller organisation="image-search" name="image-search_2.10" conf="test-internal, test, optional, compile, provided, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="0.1"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-gridfs_2.10">
+			<revision name="2.6.3" status="release" pubdate="20130916153228" resolver="public" artresolver="public" homepage="http://github.com/mongodb/casbah" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="8">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="3160" time="151" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-gridfs_2.10/ivy-2.6.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-gridfs_2.10/ivy-2.6.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/casbah-gridfs_2.10/2.6.3/casbah-gridfs_2.10-2.6.3.pom"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="casbah-gridfs_2.10" type="jar" ext="jar" status="successful" details="" size="80515" time="130" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-gridfs_2.10/jars/casbah-gridfs_2.10-2.6.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/mongodb/casbah-gridfs_2.10/2.6.3/casbah-gridfs_2.10-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-core_2.10">
+			<revision name="2.6.3" status="release" pubdate="20130916153224" resolver="public" artresolver="public" homepage="http://github.com/mongodb/casbah" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="6">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="3123" time="166" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-core_2.10/ivy-2.6.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-core_2.10/ivy-2.6.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/casbah-core_2.10/2.6.3/casbah-core_2.10-2.6.3.pom"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="com.novus" name="salat-core_2.10" conf="compile, runtime" rev="2.6.2" rev-constraint-default="2.6.2" rev-constraint-dynamic="2.6.2" callerrev="1.9.2"/>
+				<artifacts>
+					<artifact name="casbah-core_2.10" type="jar" ext="jar" status="successful" details="" size="235480" time="149" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-core_2.10/jars/casbah-core_2.10-2.6.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/mongodb/casbah-core_2.10/2.6.3/casbah-core_2.10-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+			<revision name="2.6.2" evicted="latest-revision" evicted-reason="" downloaded="false" searched="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="-1">
+				<evicted-by rev="2.6.3"/>
+				<caller organisation="com.novus" name="salat-core_2.10" conf="compile, runtime" rev="2.6.2" rev-constraint-default="2.6.2" rev-constraint-dynamic="2.6.2" callerrev="1.9.2"/>
+				<artifacts>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-query_2.10">
+			<revision name="2.6.3" status="release" pubdate="20130916153210" resolver="public" artresolver="public" homepage="http://github.com/mongodb/casbah" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="7">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="2948" time="234" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-query_2.10/ivy-2.6.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-query_2.10/ivy-2.6.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/casbah-query_2.10/2.6.3/casbah-query_2.10-2.6.3.pom"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="casbah-query_2.10" type="jar" ext="jar" status="successful" details="" size="228882" time="290" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-query_2.10/jars/casbah-query_2.10-2.6.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/mongodb/casbah-query_2.10/2.6.3/casbah-query_2.10-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="casbah-commons_2.10">
+			<revision name="2.6.3" status="release" pubdate="20130916153212" resolver="public" artresolver="public" homepage="http://github.com/mongodb/casbah" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="1">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.html"/>
+				<metadata-artifact status="successful" details="" size="2953" time="118" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-commons_2.10/ivy-2.6.3.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-commons_2.10/ivy-2.6.3.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/casbah-commons_2.10/2.6.3/casbah-commons_2.10-2.6.3.pom"/>
+				<caller organisation="org.mongodb" name="casbah_2.10" conf="default, compile, runtime, master" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="2.6.3" rev-constraint-default="2.6.3" rev-constraint-dynamic="2.6.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="casbah-commons_2.10" type="jar" ext="jar" status="successful" details="" size="156741" time="209" location="/home/ubuntu/.ivy2/cache/org.mongodb/casbah-commons_2.10/jars/casbah-commons_2.10-2.6.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/mongodb/casbah-commons_2.10/2.6.3/casbah-commons_2.10-2.6.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.mongodb" name="mongo-java-driver">
+			<revision name="2.11.3" status="release" pubdate="20130912191233" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://www.mongodb.org" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="5">
+				<license name="The Apache Software License, Version 2.0" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="2385" time="0" location="/home/ubuntu/.ivy2/cache/org.mongodb/mongo-java-driver/ivy-2.11.3.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/2.11.3/mongo-java-driver-2.11.3.pom"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="2.11.3" rev-constraint-default="2.11.3" rev-constraint-dynamic="2.11.3" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="mongo-java-driver" type="jar" ext="jar" status="no" details="" size="419054" time="0" location="/home/ubuntu/.ivy2/cache/org.mongodb/mongo-java-driver/jars/mongo-java-driver-2.11.3.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/2.11.3/mongo-java-driver-2.11.3.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="com.github.nscala-time" name="nscala-time_2.10">
+			<revision name="0.2.0" status="release" pubdate="20121225123952" resolver="public" artresolver="public" homepage="https://github.com/nscala-time/nscala-time" downloaded="true" searched="true" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="2">
+				<license name="Apache" url="http://www.opensource.org/licenses/Apache-2.0"/>
+				<metadata-artifact status="successful" details="" size="2208" time="145" location="/home/ubuntu/.ivy2/cache/com.github.nscala-time/nscala-time_2.10/ivy-0.2.0.xml" searched="true" original-local-location="/home/ubuntu/.ivy2/cache/com.github.nscala-time/nscala-time_2.10/ivy-0.2.0.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.10/0.2.0/nscala-time_2.10-0.2.0.pom"/>
+				<caller organisation="org.mongodb" name="casbah-commons_2.10" conf="compile, runtime" rev="0.2.0" rev-constraint-default="0.2.0" rev-constraint-dynamic="0.2.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-gridfs_2.10" conf="compile, runtime" rev="0.2.0" rev-constraint-default="0.2.0" rev-constraint-dynamic="0.2.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-core_2.10" conf="compile, runtime" rev="0.2.0" rev-constraint-default="0.2.0" rev-constraint-dynamic="0.2.0" callerrev="2.6.3"/>
+				<caller organisation="org.mongodb" name="casbah-query_2.10" conf="compile, runtime" rev="0.2.0" rev-constraint-default="0.2.0" rev-constraint-dynamic="0.2.0" callerrev="2.6.3"/>
+				<artifacts>
+					<artifact name="nscala-time_2.10" type="jar" ext="jar" status="successful" details="" size="117309" time="312" location="/home/ubuntu/.ivy2/cache/com.github.nscala-time/nscala-time_2.10/jars/nscala-time_2.10-0.2.0.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/com/github/nscala-time/nscala-time_2.10/0.2.0/nscala-time_2.10-0.2.0.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="joda-time" name="joda-time">
+			<revision name="2.1" status="release" pubdate="20120222162242" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://joda-time.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="3">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3297" time="0" location="/home/ubuntu/.ivy2/cache/joda-time/joda-time/ivy-2.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/joda-time/joda-time/2.1/joda-time-2.1.pom"/>
+				<caller organisation="com.github.nscala-time" name="nscala-time_2.10" conf="compile, runtime" rev="2.1" rev-constraint-default="2.1" rev-constraint-dynamic="2.1" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="joda-time" type="jar" ext="jar" status="no" details="" size="570478" time="0" location="/home/ubuntu/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.1.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/joda-time/joda-time/2.1/joda-time-2.1.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.joda" name="joda-convert">
+			<revision name="1.2" status="release" pubdate="20111027195117" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://joda-convert.sourceforge.net" downloaded="false" searched="false" default="false" conf="compile, master(*), runtime, compile(*), runtime(*), master" position="4">
+				<license name="Apache 2" url="http://www.apache.org/licenses/LICENSE-2.0.txt"/>
+				<metadata-artifact status="no" details="" size="3114" time="0" location="/home/ubuntu/.ivy2/cache/org.joda/joda-convert/ivy-1.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.pom"/>
+				<caller organisation="com.github.nscala-time" name="nscala-time_2.10" conf="compile, runtime" rev="1.2" rev-constraint-default="1.2" rev-constraint-dynamic="1.2" callerrev="0.2.0"/>
+				<artifacts>
+					<artifact name="joda-convert" type="jar" ext="jar" status="no" details="" size="38460" time="0" location="/home/ubuntu/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/joda/joda-convert/1.2/joda-convert-1.2.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+	</dependencies>
+</ivy-report>
